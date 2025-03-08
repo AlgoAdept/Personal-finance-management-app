@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f3f0ff; /* Soft lavender background */
+  color: #333;
+}
+
+/* Content Wrapper */
+.content {
+  height: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Transaction Page */
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #6a5acd, #9370db); /* Dark purple to soft purple */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  color: white;
+}
+
+.filters:hover {
+  transform: scale(1.02);
+}
+
+/* Antd Icons */
+.switch-icons {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.switch-icons:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}
+
+.anticon svg {
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.anticon svg:hover {
+  color: #6a5acd; /* Soft purple hover effect */
+  transform: rotate(15deg);
+}
+
+.active-icon {
+  color: #4b0082; /* Deep purple */
+  font-weight: bold;
+}
+
+.inactive-icon {
+  color: gray;
+}
+
+/* Filter Select Dropdown */
+.filter-tab .ant-select-selector {
+  width: 150px !important;
+  border-radius: 5px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-tab .ant-select-selector:hover {
+  box-shadow: 0px 0px 8px rgba(106, 90, 205, 0.5); /* Light purple glow */
+}
+
+/* Button Animation */
+button {
+  padding: 10px 15px;
+  border: none;
+  background: linear-gradient(135deg, #4b0082, #6a5acd); /* Deep purple to medium purple */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #6a5acd, #4b0082);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
