@@ -8,10 +8,12 @@ const Register = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   //from submit
+  const API_URL = process.env.REACT_APP_API_URL || "https://your-backend.onrender.com/api/v1";
+
   const submitHandler = async (values) => {
     try {
       setLoading(true);
-      await axios.post("/api/v1/users/register", values);
+await axios.post(`${API_URL}/users/register`, values);
       message.success("Registeration Successfull");
       setLoading(false);
       navigate("/login");
