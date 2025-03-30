@@ -12,6 +12,7 @@ import Spinner from "./../components/Spinner";
 import moment from "moment";
 import Analytics from "../components/Analytics";
 const { RangePicker } = DatePicker;
+const API_URL = process.env.REACT_APP_API_URL || "https://your-backend.onrender.com/api/v1";
 
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -75,7 +76,7 @@ const HomePage = () => {
       try {
         const user = JSON.parse(localStorage.getItem("user"));
         setLoading(true);
-        const res = await axios.post("/api/v1/transections/get-transection", {
+      const res = await axios.post(`${API_URL}/transections/get-transection`, {
           userid: user._id,
           frequency,
           selectedDate,
@@ -94,7 +95,7 @@ const HomePage = () => {
   const handleDelete = async (record) => {
     try {
       setLoading(true);
-      await axios.post("/api/v1/transections/delete-transection", {
+    await axios.post(`${API_URL}/transections/delete-transection`, {
         transacationId: record._id,
       });
       setLoading(false);
@@ -112,7 +113,7 @@ const HomePage = () => {
       const user = JSON.parse(localStorage.getItem("user"));
       setLoading(true);
       if (editable) {
-        await axios.post("/api/v1/transections/edit-transection", {
+      await axios.post(`${API_URL}/transections/edit-transection`, {
           payload: {
             ...values,
             userId: user._id,
@@ -122,7 +123,7 @@ const HomePage = () => {
         setLoading(false);
         message.success("Transaction Updated Successfully");
       } else {
-        await axios.post("/api/v1/transections/add-transection", {
+      await axios.post(`${API_URL}/transections/add-transection`, {
           ...values,
           userid: user._id,
         });
