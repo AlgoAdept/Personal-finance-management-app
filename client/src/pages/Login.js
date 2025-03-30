@@ -9,11 +9,13 @@ const Login = () => {
     "https://img.freepik.com/free-vector/online-banking-concept-illustration_114360-17345.jpg?ga=GA1.1.1197316888.1741416799&semt=ais_hybrid";
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const API_URL = process.env.REACT_APP_API_URL || "https://your-backend.onrender.com/api/v1";
+
   //from submit
   const submitHandler = async (values) => {
     try {
       setLoading(true);
-      const { data } = await axios.post("/api/v1/users/login", values);
+      const { data } = await axios.post(`${API_URL}/users/login`, values);
       setLoading(false);
       message.success("login success");
       localStorage.setItem(
