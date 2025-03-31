@@ -8,7 +8,7 @@ const Register = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   //from submit
-  const API_URL = process.env.REACT_APP_API_URL || "https://your-backend.onrender.com/api/v1";
+  const API_URL = process.env.REACT_APP_API_URL || "https://backend-whtf.onrender.com/api/v1";
 
   const submitHandler = async (values) => {
     try {
