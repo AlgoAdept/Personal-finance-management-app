@@ -12,7 +12,7 @@ import Spinner from "./../components/Spinner";
 import moment from "moment";
 import Analytics from "../components/Analytics";
 const { RangePicker } = DatePicker;
-const API_URL = process.env.REACT_APP_API_URL || "https://your-backend.onrender.com/api/v1";
+const API_URL = process.env.REACT_APP_API_URL || "https://backend-whtf.onrender.com/api/v1";
 
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
