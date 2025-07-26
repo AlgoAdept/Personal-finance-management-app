@@ -32,7 +32,7 @@ An intuitive, secure, and real-time **Expense Management System** built with the
 ## 📸 Demo Screenshots
 
 ### 🧑‍💼 Login Page
-![Login Page](assets/login-page.png)
+![Login Page](assets/login_page.png)
 
 ### 📝 Register Page
 ![Register Page](assets/register-page.png)
